@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create account</title>
+    <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+    <main class="container">
+    <h2>Créer un compte</h2>
+    <span>Entrer les détails de votre compte</span>
+    <a href="welcome.html"> log in</a>
+
+        <form >
+            <label for="username">Nom d'usage</label><br>
+            <input type="text" maxlength="30" ><br>
+
+            <label for="birthday">Date de naissance:</label><br>
+            <input type="date" ><br>
+
+            <p>Email</p>
+            <input type="email" maxlength="30">
+            <br><br>
+
+            <label for="pwd">Password:</label><br>
+            <input type="password" maxlength="16" ><br><br>
+            
+            <label for="family">Nombre de personnes:</label>
+            <select >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <br><br>
+
+            <textarea name="message" rows="10" cols="30" maxlength="200">Entrer un message.</textarea>
+            <br><br>
+            <input type="submit" value="Sign in"><br> 
+        </form>
+    </main>
+</body>
+</html>

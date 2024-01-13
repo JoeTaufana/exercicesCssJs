@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: normal; /*****enlève l'épaisseur du gras sur tout les titres H******/
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;/*ajoute un effet sur le scroll au clique*/
+}
+
+@font-face {
+    font-family: 'BigN';
+    src: url('../fonts/BigNoodleTitling.eot');
+    src: url('../fonts/BigNoodleTitling.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BigNoodleTitling.woff2') format('woff2'),
+        url('../fonts/BigNoodleTitling.woff') format('woff'),
+        url('../fonts/BigNoodleTitling.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/*****************Header****************/
+
+/* Styles pour la section d'en-tête */
+header {
+    height: 100vh; /* Hauteur de la section en vue de la hauteur (viewport height) */
+    background: url("../img/fond.jpg") center; /* Image de fond centrée */
+    background-size: cover; /* Couvrir l'intégralité de la section avec l'image de fond */
+    display: flex; /* Utiliser flexbox pour la mise en page */
+    justify-content: center; /* Centrer le contenu horizontalement */
+    align-items: center; /* Centrer le contenu verticalement */
+}
+
+/* Styles pour la navigation dans l'en-tête */
+header nav {
+    position: fixed; /* Position fixe pour rester en place lors du défilement */
+    top: 50%; /* Positionné au centre vertical de la fenêtre */
+    left: 5%; /* Positionné à 5% du bord gauche de la fenêtre */
+    background: rgba(255, 255, 255, 0.7); /* Fond blanc semi-transparent */
+    transform: translateY(-50%); /* Ajuster pour le centrage vertical */
+}
+
+/* Styles pour les éléments de liste dans la navigation */
+header nav ul li {
+    padding: 10px 20px; /* Espacement intérieur des éléments de liste */
+    border-bottom: 2px solid black; /* Bordure basse pour la séparation */
+}
+
+header nav ul li:last-of-type {
+    border-bottom: none; /* Supprimer la bordure basse pour le dernier élément de la liste */
+}
+
+header nav ul li a {
+    font-family: 'big'; /* Police de caractères pour le texte du lien */
+    color: black; /* Couleur du texte */
+    text-transform: uppercase; /* Convertir le texte en majuscules */
+}
+
+header nav ul li:hover a {
+    text-decoration: line-through; /* Souligner le texte au survol */
+}
+
+/* Styles pour la division dans l'en-tête */
+header div {
+    width: 20vw; /* Largeur de la division en unités de largeur de la fenêtre d'affichage */
+    height: 20vw; /* Hauteur de la division en unités de largeur de la fenêtre d'affichage */
+    position: relative; /* Position relative pour les enfants en position absolue */
+}
+
+/* Styles pour l'image dans la division */
+header div img {
+    width: 100%; /* Faire en sorte que l'image remplisse le conteneur */
+    position: absolute; /* Position absolue pour un contrôle précis */
+    top: 0; /* Positionné en haut */
+    left: 0; /* Positionné à gauche */
+}
+
+/*****************Fin de l'en-tête******************/
+
+/* Styles de la section principale */
+main {
+    display: flex; /* Utiliser flexbox pour la mise en page */
+    justify-content: flex-end; /* Aligner le contenu à l'extrémité droite du conteneur */
+}
+
+/* Styles pour les sections dans le conteneur principal */
+main section {
+    width: 70%; /* Largeur de la section */
+    padding: 100px 0; /* Rembourrage pour la section */
+    display: flex; /* Utiliser flexbox pour la mise en page */
+    flex-wrap: wrap; /* Permettre au contenu de passer à la ligne suivante si nécessaire */
+}
+
+/* Styles pour les éléments de division individuels dans la section */
+main section > div {
+    width: 200px; /* Largeur de la division */
+    height: 200px; /* Hauteur de la division */
+    margin: 50px; /* Marge autour de la division */
+    font-family: 'BigN'; /* Police de caractères pour le texte dans la division */
+    font-size: 20px; /* Taille de la police pour le texte dans la division */
+}
+
+/* Styles pour les images dans la division */
+main section > div img {
+    width: 100%; /* Faire en sorte que l'image remplisse le conteneur */
+}
+
+/* Styles pour les divisions imbriquées dans la section */
+main section > div > div {
+    position: relative; /* Position relative pour les enfants en position absolue */
+    overflow: hidden; /* Masquer tout débordement de contenu */
+}
+
+/* Styles pour les divisions imbriquées plus profondes dans la section */
+main section > div > div > div {
+    width: 200px; /* Largeur de la division la plus interne */
+    height: 200px; /* Hauteur de la division la plus interne */
+    background: rgba(0, 0, 0, 0.5); /* Fond noir semi-transparent */
+    color: white; /* Couleur du texte */
+    position: absolute; /* Position absolue pour un contrôle précis */
+    top: 0; /* Positionné en haut */
+    left: 0; /* Positionné à gauche */
+    display: flex; /* Utiliser flexbox pour la mise en page */
+    justify-content: center; /* Centrer le contenu horizontalement */
+    align-items: center; /* Centrer le contenu verticalement */
+}
+
+/* Styles pour les paragraphes dans la division la plus interne */
+main section > div > div > div p {
+    text-align: center; /* Centrer le texte horizontalement */
+}
+
+.top div {
+    transform: translateY(-100%); /* Déplacer la division vers le haut de 100% de sa hauteur */
+    transition: 0.5s; /* Animation de transition sur 0.5 seconde */
+}
+
+.top:hover div {
+    transform: translateY(0); /* Déplacer la division vers le haut de 0% de sa hauteur au survol */
+    transition: 0.5s; /* Animation de transition sur 0.5 seconde */
+}
+
+/*****************Pied de page******************/
+
+footer {
+    height: 400px; /* Hauteur du pied de page */
+    backgrou
+
+

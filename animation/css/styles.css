@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/************************
+FONTS
+************************/
+/*Ne pas oublier de changer le chemin vers votre dossier fonts*/
+@font-face {
+    font-family: 'DolceLight';
+    src: url('../fonts/DolceVitaLight.eot');
+    src: url('../fonts/DolceVitaLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DolceVitaLight.woff2') format('woff2'),
+        url('../fonts/DolceVitaLight.woff') format('woff'),
+        url('../fonts/DolceVitaLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neo';
+    src: url('../fonts/NEOTERIC-Bold.eot');
+    src: url('../fonts/NEOTERIC-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NEOTERIC-Bold.woff2') format('woff2'),
+        url('../fonts/NEOTERIC-Bold.woff') format('woff'),
+        url('../fonts/NEOTERIC-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dolce';
+    src: url('../fonts/DolceVita.eot');
+    src: url('../fonts/DolceVita.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DolceVita.woff2') format('woff2'),
+        url('../fonts/DolceVita.woff') format('woff'),
+        url('../fonts/DolceVita.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/*********FIn FoNTS *****/
+header{
+    height: 70px;/*hauteur du header*/
+    display: flex;/*permet à l'image et la nav d'être à côté*/
+    justify-content: space-between;/*les éléments se répartissent 
+    de droite à gauche et bord à bord du header*/
+}
+header img{
+    height: 50px;/*hauteur de l'image*/
+    margin: 10px;/*marge de 10px autour de l'image*/
+}
+header nav {
+    display: flex; /* permet l'utilisation d'align-items*/
+    align-items: end;/*permet de mettre la UL en bas de la nav*/
+    margin-right: 10px;/* éloigner la nav de la droite de l'écran*/
+
+}
+header nav ul{
+    display: flex;/* permet au LI d'être les unes à côté des autres*/
+    list-style: none;/* enlève les puces*/
+
+}
+header nav ul li{
+    display: flex;/* permet de mettre les A à côté des span*/
+}
+header nav ul li a{
+    font-family: 'Neo';/*modification de la font*/
+    text-transform: uppercase;/*mettre en majuscule la typo*/
+    letter-spacing: 1px;/*va créer un espace entre les lettres interlettrage*/
+    color:black;/*mettre la couleur au texte*/
+    text-decoration: none;/*enlever le soulignement sur le A*/
+    transition: 0.5s;/*mets un effet sur l'animation de la bordure*/
+    height:30px; /* fixe la hauteur a 30px pour ne pas avoir de décalage quand la bordure s'affiche*/
+    display: block;/*obligatoire pour mettre une hauteur au A(élément inline par défaut)*/
+    box-sizing: border-box;/*force la bordure à être à l'intérieur de la hauteur du A*/
+}
+header nav ul li a:hover, .ici{
+    border-bottom:8px solid ; /*affiche une bordure sous le A au survol 
+    et affiche une bordure sur l'élément qui a la classe*/
+}
+
+header nav ul li span{
+    margin :0 15px; /*ajoute une marge à gauche et à droite de chaque span*/
+}
+main section{
+    height: calc(100vh - 70px);/* on enlève la hauteur du header à la hauteur de l'écran 
+    pour que la section occupe le reste de l'espace*/
+    background: url("../img/fond3.jpg") center;/*ajoute l'image en fond de section*/
+    background-size: cover;/* oblige le fond à occuper l'intégralité de la section*/
+    display: flex;/*permet l'utilisation de justify-content et align-items*/
+    justify-content: center;/*va centrer le h1 + la div et le des autres section sur la largeur*/
+    align-items: center;/*va centrer le h1 + la div et le des autres section sur la hauteur*/
+    flex-direction: column;/*va permettre à la div parent et au a d'être l'un au dessus de l'autre*/
+}
+main section h1{
+    font-family: 'Dolce';
+    font-size: 100px;/*taille du titre*/
+    color: white;/*couleur du titre*/
+    text-align: center;/*centre le titre*/
+    font-weight: normal;/*enlève le bold qui est mis par défaut sur le h1*/
+}
+main section h1::first-line{
+    font-family: 'DolceLight';/*change la font de la première ligne*/
+}
+/********************************************************
+Les Pages
+********************************************************/
+section>div {/*cible la div de premier niveau*/
+    display: flex;/*permet de mettre les 3 div les unes à côté des autres*/
+}
+section>div div{
+    width: 150px;/*largeur des 3 petites div*/
+    height: 150px;/*hauteur des 3 petites div*/
+    margin: 50px;/*éloigne les 3 div les unes des autres*/
+    border: 2px solid white;/*bordure blanche sur les 3 div*/
+}
+section a{
+    color: black;/* couleur du lien A*/
+    padding: 15px 30px; /*ajoute une marge interne de 15px en haut et en bas et 30px à gauche et à droite*/
+    background: white;/*fond de couleur*/
+    font-family: "Dolce";/*change la font*/
+    letter-spacing: 1px;/*espace les lettres*/
+    text-decoration: none;/*enlève le soulignement*/
+    transition:0.5s;/*va mettre un effet sur les changements du hover*/
+}
+section a:hover{
+    background: black;/* change la couleur de fond au survol*/
+    color:white;/* change la couleur du texte au survol*/
+}
+/*rotation*/
+#rot>div div:first-of-type{
+    transform: rotate(45deg);/*créer une rotation sur la première div des l'ouverture de la page*/
+}
+#rot>div div:nth-of-type(2):hover{
+    transform: rotate(45deg);/*créer une rotation sur la deuxième div au survol*/
+}
+#rot>div div:nth-of-type(3){
+    transition: 0.5s; /*ajoute l'effet sur la rotation de la troisieme div*/
+}
+#rot>div div:nth-of-type(3):hover{ /*au survol (hover) ça tourne*/
+    transform: rotate(45deg);/*créer une rotation sur la troisieme div au survol*/
+    
+}
+/*zoom*/ 
+/*de 0 à 1 = réduction, au dessus de 1 = agrandissement*/
+#zoom>div div:first-of-type{
+    transform: scale(1.2); /*va augmenter la taille de la première div*/
+}
+#zoom>div div:nth-of-type(2):hover{
+    transform: scale(0.8);/*va réduire la taille de la deuxième div*/
+}
+#zoom>div div:nth-of-type(3){
+    transition: 0.5s; /*ajoute l'effet sur la troisième div sur le changement de taille*/
+}
+#zoom>div div:nth-of-type(3):hover{/*au survol (hover) ça se réduit*/
+    transform: scale(0.3);/*va réduire la taille de la troisième div*/
+    
+}
+/*inclinaison*/
+#incli>div div:first-of-type{
+    transform: skewX(15deg);/*va incliner la première div sur l'axe des X (horizontalement)*/
+}
+#incli>div div:nth-of-type(2):hover{
+    transform: skewY(15deg); /*va incliner la première div sur l'axe des Y (verticalement)*/
+}
+#incli>div div:nth-of-type(3){
+    transition: 0.5s; /*ajoute l'effet sur l'inclinaison*/
+}
+#incli>div div:nth-of-type(3):hover{/*au survol (hover) ça s'incline*/
+    transform: skewX(15deg);/*va incliner la première div sur l'axe des X (horizontalement)*/
+    
+}
+/*déplacement*/
+#dep>div div:first-of-type{
+    transform: translate(10px, 15px);/*va déplacer la div de 10px sur l'axe des X et de 15px sur l'axe des Y*/
+}
+#dep>div div:nth-of-type(2):hover{
+    transform: translateY(15px);/*va déplacer la div de 15px sur l'axe des Y*/
+}
+#dep>div div:nth-of-type(3){
+    transition: 0.5s; /*ajoute l'effet sur le déplacement*/
+}
+#dep>div div:nth-of-type(3):hover{/*au survol (hover) ça se déplace*/
+    transform: translateX(15px);/*va déplacer la div de 15px sur l'axe des X*/
+    
+}
+/*origin*/
+#ori>div div:first-of-type{
+    transform-origin:top right;/*change le point d'origine de ma transformation. 
+    La rotation va se faire part rapport à l'angle haut droit*/
+    transform: rotate(45deg);/*créer une rotation sur la première div des l'ouverture de la page*/
+}
+#ori>div div:nth-of-type(2){
+    transform-origin:bottom left;/*change le point d'origine de ma transformation. 
+    La rotation va se faire part rapport à l'angle bas gauche*/
+}
+#ori>div div:nth-of-type(2):hover{
+    transform: rotate(45deg);/*créer une rotation sur la deuxième div*/
+}
+#ori>div div:nth-of-type(3){
+    transform-origin:bottom right;/*change le point d'origine de ma transformation. 
+    La rotation va se faire part rapport à l'angle bas droit*/
+    transition: 0.5s; /*ajoute l'effet sur le déplacement*/
+}
+#ori>div div:nth-of-type(3):hover{/*au survol (hover) ça se déplace*/
+    transform: rotate(45deg);/*créer une rotation sur la troisieme div*/
+    
+}
